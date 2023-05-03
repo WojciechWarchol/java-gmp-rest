@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:eventservice
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#    The following param is needed for the data.sql script to work properly. Without it the table is not found.
+    defer-datasource-initialization: true
+  h2.console.enabled: true
+  mvc.pathmatch.matching-strategy: ant_path_matcher
